@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sudoku Solver</title>
+</head>
+<body>
+    <h1>Sudoku Solver</h1>
+    <style>
+      table { border-collapse: collapse; font-family: Calibri, sans-serif; }
+      colgroup, tbody { border: solid medium; }
+      td { border: solid thin; height: 1.8em; width: 1.4em; text-align: center; padding: 0; }
+      input{text-align: center;
+      border: none;
+      outline:none;}
+
+      </style>
+      
+      <table id="sudoku-grid">
+        <caption>Sudoku Solver</caption>
+        <colgroup><col><col><col></colgroup>
+        <colgroup><col><col><col></colgroup>
+        <colgroup><col><col><col></colgroup>
+        
+        <tbody>
+         <tr> <td><input type="text" name="number" maxlength="1" size="1"> 
+         <td> <input type="text"  name="number" maxLength=1 size="1"> 
+         <td><input type="text"  name="number" maxLength=1 size="1"> 
+         <td><input type="text"  name="number" maxLength=1 size="1"> <td><input type="text"  name="number" maxLength=1 size="1">  <td><input type="text"  name="number" maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1">  
+         <td><input type="text"  name="number" maxLength=1 size="1">
+         <tr> <td><input type="text" name="number" maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1">  <td><input type="text" name="number" maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1">
+           <td><input type="text" name="number" maxLength=1 size="1">  <td><input type="text" name="number" maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1">
+         <tr> <td><input type="text" name="number"  maxLength=1 size="1"> <td><input type="text" name="number"  maxLength=1 size="1">  <td><input type="text" name="number" maxLength=1 size="1">  <td><input type="text" name="number" maxLength=1 size="1">  <td><input type="text" name="number"  maxLength=1 size="1">  <td><input type="text" name="number" maxLength=1 size="1">  <td><input type="text" name="number" maxLength=1 size="1">  <td><input type="text" name="number"  maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1">
+             
+       <tbody>
+         <tr> <td><input type="text" name="number" maxlength="1" size="1"> 
+         <td> <input type="text"  name="number" maxLength=1 size="1"> 
+         <td><input type="text"  name="number" maxLength=1 size="1"> 
+         <td><input type="text"  name="number" maxLength=1 size="1"> <td><input type="text"  name="number" maxLength=1 size="1">  <td><input type="text"  name="number" maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1">  
+         <td><input type="text"  name="number" maxLength=1 size="1">
+         <tr> <td><input type="text" name="number" maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1">  <td><input type="text" name="number" maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1">
+           <td><input type="text" name="number" maxLength=1 size="1">  <td><input type="text" name="number" maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1">
+         <tr> <td><input type="text" name="number"  maxLength=1 size="1"> <td><input type="text" name="number"  maxLength=1 size="1">  <td><input type="text" name="number" maxLength=1 size="1">  <td><input type="text" name="number" maxLength=1 size="1">  <td><input type="text" name="number"  maxLength=1 size="1">  <td><input type="text" name="number" maxLength=1 size="1">  <td><input type="text" name="number" maxLength=1 size="1">  <td><input type="text" name="number"  maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1">
+             
+       <tbody>
+         <tr> <td><input type="text" name="number" maxlength="1" size="1"> 
+         <td> <input type="text"  name="number" maxLength=1 size="1"> 
+         <td><input type="text"  name="number" maxLength=1 size="1"> 
+         <td><input type="text"  name="number" maxLength=1 size="1"> <td><input type="text"  name="number" maxLength=1 size="1">  <td><input type="text"  name="number" maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1">  
+         <td><input type="text"  name="number" maxLength=1 size="1">
+         <tr> <td><input type="text" name="number" maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1">  <td><input type="text" name="number" maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1">
+           <td><input type="text" name="number" maxLength=1 size="1">  <td><input type="text" name="number" maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1">
+         <tr> <td><input type="text" name="number"  maxLength=1 size="1"> <td><input type="text" name="number"  maxLength=1 size="1">  <td><input type="text" name="number" maxLength=1 size="1">  <td><input type="text" name="number" maxLength=1 size="1">  <td><input type="text" name="number"  maxLength=1 size="1">  <td><input type="text" name="number" maxLength=1 size="1">  <td><input type="text" name="number" maxLength=1 size="1">  <td><input type="text" name="number"  maxLength=1 size="1"> <td><input type="text" name="number" maxLength=1 size="1">
+           
+    
+        
+    </table>
+    <button id="solve-button">Solve Sudoku</button>
+    <div id="solution">
+        <!-- Display the solution here -->
+    </div>
+    <script src="sudoku_solver.js"></script>
+</body>
+</html>
